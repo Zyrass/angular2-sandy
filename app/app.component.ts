@@ -93,11 +93,56 @@ diminuerNombreMille(){
 /*****************************************************************************
  * EXERCICE 5 / Propriétés
  ***************************************************************************** */
+// Attribut sélectionné de ma balise img
+image: string = 'app/images/vaiana/vaiana1.jpg';
+alt: string = "Présentation du nouveau disney en image";
+largeur: string = '600';
+hauteur: string = '250';
+
+// description et titre de la photo
+titlePhoto: string = 'Vaïana photo n°1';
+descriptionPhoto: string = "Photo représentative de Vaïana l'héroïne et de Maoouï le dieu un peu loufoque du film."
+
+// Bouton changement d'image
+changeImage: string = 'Voir une autre image de Vaïana';
+
 
 /*****************************************************************************
  * EXERCICE 5 / Function
  ***************************************************************************** */
-
+nextImages() {
+  if (this.image == 'app/images/vaiana/vaiana1.jpg') {
+    this.image = 'app/images/vaiana/vaiana2.jpg';
+    this.alt = 'Grimace des héros';
+    this.hauteur = "350";
+    this.titlePhoto = 'Vaïana photo n°2';
+    this.descriptionPhoto = "Super montage sur les héros de vaïana en pleine séance de grimace pour nôtre plus grand plaisir";
+  } else if ( this.image == 'app/images/vaiana/vaiana2.jpg') {
+    this.image = 'app/images/vaiana/vaiana3.jpg';
+    this.alt = 'La grand mère de vaiana';
+    this.hauteur = "250";
+    this.titlePhoto = 'Vaïana photo n°3';
+    this.descriptionPhoto = "Voici un montage de la grand mère de Vaïana";
+  } else if ( this.image == 'app/images/vaiana/vaiana3.jpg') {
+    this.image = 'app/images/vaiana/vaiana4.jpg';
+    this.alt = 'Montage utilisé pour la jaquette du film. Enfin pour ce qui est de la version VFF sortie fin d\'année 2016 en France';
+    this.hauteur = "300";
+    this.titlePhoto = 'Vaïana photo n°4';
+    this.descriptionPhoto = "Affiche Vaïana";
+  } else if ( this.image == 'app/images/vaiana/vaiana4.jpg') {
+    this.image = 'app/images/vaiana/vaiana5.PNG';
+    this.alt = 'Bébé Vaïana, trop à croquer';
+    this.hauteur = "400";
+    this.titlePhoto = 'Vaïana photo n°5';
+    this.descriptionPhoto = "Bébé Vaïana";
+  } else if ( this.image == 'app/images/vaiana/vaiana5.PNG') {
+    this.image = 'app/images/vaiana/vaiana1.jpg';
+    this.alt = 'Présentation du nouveau disney en image';
+    this.hauteur = "250";
+    this.titlePhoto = 'Vaïana photo n°1';
+    this.descriptionPhoto = "Photo représentative de Vaïana l'héroïne et de Maoouï le dieu un peu loufoque du film.";
+  }
+}
 /*****************************************************************************
  * EXERCICE 6 / Propriétés
  ***************************************************************************** */

@@ -152,22 +152,52 @@
                       <span class="text-danger">Pour corser les choses, il faut créer également une petite description selon l'image que c'est le tout bien entendu dynamiquement.</span> Également j'impose ici une limitation à 5 images.<br />
                       Le tout sera également joué en boucle.</p>
                     </fieldset>
-                    <div class="row bg-warning">
+                    <div class="row">
                       <div class="col-sm-12 col-lg-8">
-                         Il faudra afficher les images ici
+                        <div class="jumbotron text-sm-center">
+                          <img [src]="image" [alt]="alt" [width]="largeur" [height]="hauteur">
+                        </div>
                       </div>
                       <div class="col-sm-12 col-lg-4">
                         <div class="card">
-                          <h3 class="card-title"> titre photo </h3>
+                          <div class="card-header card-inverse card-info">
+                            <h3 class="card-title"> {{ titlePhoto }}</h3>
+                          </div>
                           <div class="card-block">
-                            <p class="alert-warning text-sm-center"> description de l'image ici </p>
+                            <hr>
+                            <p class="alert-warning text-sm-center lead"> {{ descriptionPhoto }} </p>
+                            <hr>
+                          </div>
+                          <div class="card-footer card-info card-inverse">
+                            <button class="btn btn-block btn-secondary" (click)="nextImages()"> {{ changeImage }} </button>
+                          </div>
+                        </div>
+                        <div class="alert alert-info">
+                          <button class="btn btn-block btn-secondary" data-toggle="modal" data-target="#clipFrench">Voir le clip vidéo en : <img src="app/images/France.svg.png" alt="flag Fr" width="20" height="10"> ( VFF )</button>
+                          <button class="btn btn-block btn-secondary" data-toggle="modal" data-target="#clipUS">Voir le clip vidéo en : <img src="app/images/USA.svg.png" alt="flag US" width="20" height="10"> ( US )</button>
+                        </div>
+                        <!-- Modal clipFrench -->
+                        <div class="modal fade" id="clipFrench">
+                          <div class="modal-content">
+                            <div class="text-sm-center">
+                              <h1>Bleu lumière, la chanson phare du nouveau disney</h1>
+                              <hr>
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/nsxFgyAzNu4" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Modal clipUs -->
+                        <div class="modal fade" id="clipUS">
+                          <div class="modal-content">
+                            <div class="text-sm-center bg-info">
+                              <h1>How Far I'll Go, la chanson phare du nouveau disney</h1>
+                              <hr>
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/ZNra8eK0K6k" frameborder="0" allowfullscreen></iframe>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div><!-- Fin row 1-3-1 -->
-                  </div>
-                  <div class="card-footer">
-                    <button class="btn btn-block btn-secondary"> MessageButtonExoFive</button>
                   </div>
                 </article>
               </div>
@@ -183,7 +213,7 @@
                     <fieldset>
                       <legend class="text-sm-center text-primary"><em>Information sur l'exercice 6</em></legend>
                       <p class="alert alert-info">Pour l'exercice de fin, il va faudra se retrousser les manches, il y a du boulot. En sommes, il faut créer une liste avec les <strong>noms, prénoms des membres de la famille</strong> et selon le bouton sélectionné,<br />
-                      <strong>nous affichons un tableau contenant le nombre de personne enregistrer dynamiquement</strong>.A côté de son nom, <strong>un oeil sera cliquable afin voir le logo du club de sport qu'il supporte.</strong>
+                      <strong>nous affichons un tableau contenant le nombre de personne enregistrer dynamiquement</strong>.A côté de son nom, <strong>un oeil sera cliquable afin voir le logo du club de sport qu'il supporte.</strong></p>
                     </fieldset>
                   </div>
                   <div class="footer text-sm-center">
