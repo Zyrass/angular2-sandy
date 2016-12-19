@@ -1,0 +1,28 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Niconne', cursive;
+  text-align: center;
+}
+
+header {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+header blockquote {
+  margin-left: 25px;
+}
+
+header blockquote p:first-child {
+  text-align: center;
+}
+header blockquote p:last-child ul {
+  text-align: center;
+}
+
+.card {
+  margin-top: 12px;
+}
+
+section article:last-child {
+  padding: 20px;
+}

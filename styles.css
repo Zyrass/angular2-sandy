@@ -1,5 +1,12 @@
-h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
+* {
+  font-family: 'Lateef', cursive;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  font-family: 'Niconne', cursive;
+  text-align: center;
 }

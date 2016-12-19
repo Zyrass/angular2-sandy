@@ -1,0 +1,199 @@
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <header>
+            <h1 class="text-info">Présentation de mes révisions sur Angular 2</h1>
+            <hr />
+            <blockquote class="blockquote">
+              <p class="alert alert-info">Étant en cours d'apprentissage sur ce merveilleux langage, je renforce mes acquis<br />
+              via des objectifs assez farfelu. Alors certains exercises sont issu d'une idée de Sandy Ludowsky formatrice sur le site UDEMY, site universitaire<br />
+              proposant via une sommes souvent assez élevé des formations de qualité, j'ai eu la chance d'obtenir ces formations à des prix défiant toutes concurences :<br />
+              Soit à 15€ au lieu de 100 à 200€ la formation. Les exercices qu'elle propose sont modifiés par mes soins afin de les rendre bien plus complexe</p>
+              <hr />
+              <p class="alert alert-warning">Pour en revenir à ces exercises, il faut savoir que le dernier exercice, est assez complexe. Il est de moi à 100% et me permet de voir mes acquis sur<br />
+              plusieurs langages, tel que : <strong>HTML 5</strong> ; <strong>CSS 3</strong> ; <strong>BOOTSTRAP 4 <span class="text-danger">(Non inclus avec angular 2)</span></strong> et <strong>JavaScript</strong></p>
+
+              <footer class="blockquote-footer">by Alain Guillon</footer>
+
+            </blockquote>
+          </header>
+        </div>
+      </div> <!-- Fin row 1 -->
+
+      <div class="row">
+        <div class="col-sm-12">
+          <section>
+            <div class="row">
+              <!-- ---------------------------------------------------------------------------------------------------------
+              ----------------------------------- Exercice 1
+              -------------------------------------------------------------------------------------------------------------- -->
+              <div class="col-sm-12 col-lg-6">
+                <article class="card">
+                  <div class="card-header card-inverse card-info">
+                    <h2 class="card-title">----- Exercice 1 -----</h2>
+                  </div>
+                  <div class="card-block">
+                    <fieldset>
+                      <legend class="text-primary text-sm-center"><em>Information sur l'exercice 1</em></legend>
+                      <p class="alert alert-info">Confectionner un bouton permettant d'afficher une boîte de dialogue de type alert.
+                      Dedans, devra se trouver le message suivant afin d'être validé :<br />
+                      <q class="text-success"><strong>Félicitation vous avez réussi !</strong></q></p>
+                      <p class="alert alert-danger">Pour compliquer le tout, il faudra faire en sorte de faire apparaître
+                      <strong>un popup avec bootstrap 4</strong> avec bien entendu le résultat affiché dedans</p>
+                    </fieldset>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-block btn-secondary" data-toggle="modal" data-target="#modalAlert"> Cliquez ici afin d'ouvrir le popup de bootstrap 4 </button>
+                  </div>
+                </article>
+              </div>
+              <div class="modal fade" id="modalAlert" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <hr>
+                    <h1>{{ titreAlert }}</h1>
+                    <p class="alert alert-info lead">{{ messageAlert }}</p>
+                    <hr>
+                    <button (click)="voirAlert()" class="btn btn-info btn-block">{{ clicResult }}</button>
+                    <hr>
+                    <p class="alert alert-success text-sm-center"><strong>{{ resultatAlert }}</strong></p>
+                    <hr>
+                  </div>
+                </div>
+              </div>
+              <!-- ---------------------------------------------------------------------------------------------------------
+              ----------------------------------- Exercice 2
+              -------------------------------------------------------------------------------------------------------------- -->
+              <div class="col-sm-12 col-lg-6">
+                <article class="card">
+                  <div class="card-header card-inverse card-info">
+                    <h2 class="card-title">----- Exercice 2 -----</h2>
+                  </div>
+                  <div class="card-block">
+                    <fieldset>
+                      <legend class="text-sm-center text-primary"><em>Information sur l'exercice 2</em></legend>
+                      <p class="alert alert-info">- Créer un bouton permettant de changer le texte. De base le bouton affiche : <br />
+                      <strong><span class="text-primary">"Cliqué sur moi pour afficher le message secret"</span></strong><br />
+                      - Automatiquement, une fois qu'on aura cliqué sur le message, le texte suivant apparaîtra permettant de valider partiellement l'exercice :<br/>
+                      <strong><span class="text-success">"Salut moussaillons, tu as réussi bravo !"</span></strong></p>
+                      <p class="alert alert-warning text-sm-center"> {{ messageSecret }}  </p>
+                      <p class="alert <alert-info></alert-info>">A ce moment, le bouton affiche un tout autre message afin cette fois-ci de cacher le texte qui vient d'être affiché à l'écran.
+                      Le bouton affichera ainsi :<br />
+                      <strong><span class="text-primary">"Cachez vite ce message c'est très urgent."</span></strong></p>
+                    </fieldset>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-block btn-secondary" (click)="voirMessageSecret()"> {{ buttonMessageSecret }} </button>
+                  </div>
+                </article>
+              </div>
+            </div> <!-- Fin row 1-1 -->
+
+            <div class="row">
+              <!-- ---------------------------------------------------------------------------------------------------------
+              ----------------------------------- Exercice 3
+              -------------------------------------------------------------------------------------------------------------- -->
+              <div class="col-sm-12 col-lg-5">
+                <article class="card">
+                  <div class="card-header card-inverse card-info">
+                    <h2 class="card-title">----- Exercice 3 -----</h2>
+                  </div>
+                  <div class="card-block">
+                    <fieldset>
+                      <legend class="text-sm-center text-primary"><em>Information sur l'exercice 3</em></legend>
+                      <p class="alert alert-info">Créer un bouton permettant d'afficher la date si possible au format <strong>DD/mm/YYYY</strong> et permettre qu'à chaque clic, de la mettre à jour. <strong>Afficher les minutes ainsi que les secondes</strong>  afin de voir si l'exemple fonctionne bien</p>
+                      <p class="alert alert-warning text-sm-center"> {{ maDate }} </p>
+                    </fieldset>
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-block btn-secondary" (click)="voirDate()"> {{ messageButtonDate }} </button>
+                  </div>
+                </article>
+              </div>
+              <!-- ---------------------------------------------------------------------------------------------------------
+              ----------------------------------- Exercice 4
+              -------------------------------------------------------------------------------------------------------------- -->
+              <div class="col-sm-12 col-lg-7">
+                <article class="card">
+                  <div class="card-header card-inverse card-info">
+                    <h2 class="card-title">----- Exercice 4 -----</h2>
+                  </div>
+                  <div class="card-block">
+                    <fieldset>
+                      <legend class="text-sm-center text-primary"><em>Information sur l'exercice 4</em></legend>
+                      <p class="alert alert-info">Ici, il faut  permettre d'afficher un nombre <strong>X</strong> qui sera automatiquement incrémenté lors du clic sur un bouton " <strong><span class="text-success">+</span></strong> ".
+                      <span class="text-danger">Afin de complexifier les choses</span>, il faudra créer un bouton " <strong><span class="text-danger">-</span></strong> " permettant cette fois-ci de décrémenter ce nombre. </p>
+                      <p class="alert alert-warning text-sm-center"> {{ number }} </p>
+                    </fieldset>
+                  </div>
+                  <div class="card-footer text-sm-center">
+                    <button class="btn btn-success" (click)="augmenterNombre()"> + 1</button> <button class="btn btn-success" (click)="augmenterNombreDix()"> + 10</button>
+                    <button class="btn btn-success" (click)="augmenterNombreCent()"> + 100</button> <button class="btn btn-success" (click)="augmenterNombreMille()"> + 1000</button>
+                    <button class="btn btn-danger" (click)="diminuerNombre()"> - 1</button> <button class="btn btn-danger" (click)="diminuerNombreDix()"> - 10</button>
+                    <button class="btn btn-danger" (click)="diminuerNombreCent()"> - 100</button> <button class="btn btn-danger" (click)="diminuerNombreMille()"> - 1000</button>
+                  </div>
+                </article>
+              </div>
+            </div> <!-- Fin row 1-2 -->
+
+            <div class="row">
+              <!-- ---------------------------------------------------------------------------------------------------------
+              ----------------------------------- Exercice 5
+              -------------------------------------------------------------------------------------------------------------- -->
+              <div class="col-sm-12">
+                <article class="card">
+                  <div class="card-header card-inverse card-info">
+                    <h2 class="card-title">----- Exercice 5 -----</h2>
+                  </div>
+                  <div class="card-block">
+                    <fieldset>
+                      <legend class="text-sm-center text-primary"><em>Information sur l'exercice 5</em></legend>
+                      <p class="alert alert-info">Pour l'exercice 5, il va falloir concevoir un carousel d'image sur le thème de vaïana. Faîtes en sortes de permettre au clic sur le bouton, d'afficher les images une à une !<br />
+                      <span class="text-danger">Pour corser les choses, il faut créer également une petite description selon l'image que c'est le tout bien entendu dynamiquement.</span> Également j'impose ici une limitation à 5 images.<br />
+                      Le tout sera également joué en boucle.</p>
+                    </fieldset>
+                    <div class="row bg-warning">
+                      <div class="col-sm-12 col-lg-8">
+                         Il faudra afficher les images ici
+                      </div>
+                      <div class="col-sm-12 col-lg-4">
+                        <div class="card">
+                          <h3 class="card-title"> titre photo </h3>
+                          <div class="card-block">
+                            <p class="alert-warning text-sm-center"> description de l'image ici </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div><!-- Fin row 1-3-1 -->
+                  </div>
+                  <div class="card-footer">
+                    <button class="btn btn-block btn-secondary"> MessageButtonExoFive</button>
+                  </div>
+                </article>
+              </div>
+              <!-- ---------------------------------------------------------------------------------------------------------
+              ----------------------------------- Exercice 6
+              -------------------------------------------------------------------------------------------------------------- -->
+              <div class="col-sm-12">
+                <article class="card">
+                  <div class="card-header card-inverse card-info">
+                    <h2 class="card-title">----- Exercice 6 -----</h2>
+                  </div>
+                  <div class="card-block">
+                    <fieldset>
+                      <legend class="text-sm-center text-primary"><em>Information sur l'exercice 6</em></legend>
+                      <p class="alert alert-info">Pour l'exercice de fin, il va faudra se retrousser les manches, il y a du boulot. En sommes, il faut créer une liste avec les <strong>noms, prénoms des membres de la famille</strong> et selon le bouton sélectionné,<br />
+                      <strong>nous affichons un tableau contenant le nombre de personne enregistrer dynamiquement</strong>.A côté de son nom, <strong>un oeil sera cliquable afin voir le logo du club de sport qu'il supporte.</strong>
+                    </fieldset>
+                  </div>
+                  <div class="footer text-sm-center">
+                    <button class="btn btn-default"> Famille Personne</button> <button class="btn btn-default"> Famille Caron</button>
+                    <button class="btn btn-default"> Famille Guillon</button> <button class="btn btn-default">Tous le monde</button>
+                  </div>
+                </article>
+              </div>
+            </div> <!-- Fin row 1-3 -->
+          </section>
+        </div>
+      </div>
+    </div>
