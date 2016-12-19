@@ -215,10 +215,36 @@
                       <p class="alert alert-info">Pour l'exercice de fin, il va faudra se retrousser les manches, il y a du boulot. En sommes, il faut créer une liste avec les <strong>noms, prénoms des membres de la famille</strong> et selon le bouton sélectionné,<br />
                       <strong>nous affichons un tableau contenant le nombre de personne enregistrer dynamiquement</strong>.A côté de son nom, <strong>un oeil sera cliquable afin voir le logo du club de sport qu'il supporte.</strong></p>
                     </fieldset>
+
+                    <div class="card">
+                      <div class="card-header card-inverse card-info">
+                        <h4 class="card-title">Tableau représentatif des membres de la famille</h4>
+                      </div>
+                      <div class="card-block">
+                        <table class="table table-sm table-striped">
+                          <thead class="thead-default text-sm-center">
+                            <tr>
+                              <th class="text-sm-center">N°</th>
+                              <th class="text-sm-center">Nom</th>
+                              <th class="text-sm-center">Prénom</th>
+                              <th class="text-sm-center">Club Supporté</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th class="text-sm-center">{{ position }}</th>
+                              <th class="text-sm-center">{{ lastName }}</th>
+                              <th class="text-sm-center">{{ firstName }}</th>
+                              <th class="text-sm-center"><img [src]="logo" [alt]="altLogo" [width]="widthLogo" [height]="heightLogo"></th>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   </div>
                   <div class="footer text-sm-center">
-                    <button class="btn btn-default"> Famille Personne</button> <button class="btn btn-default"> Famille Caron</button>
-                    <button class="btn btn-default"> Famille Guillon</button> <button class="btn btn-default">Tous le monde</button>
+                    <button class="btn btn-default" (click)="personne()"> Famille Personne</button> <button class="btn btn-default" (click)="caron()"> Famille Caron</button>
+                    <button class="btn btn-default" (click)="guillon()"> Famille Guillon</button> <button class="btn btn-default" (click)="all()">Tous le monde</button>
                   </div>
                 </article>
               </div>

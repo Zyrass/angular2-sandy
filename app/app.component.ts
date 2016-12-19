@@ -147,8 +147,41 @@ nextImages() {
  * EXERCICE 6 / Propriétés
  ***************************************************************************** */
 
+position: number = 0;
+lastName: string = '';
+firstName: string = '';
+logo: string = "";
+altLogo: string = "";
+width: string = "25";
+height: string = "20";
+
+
+
 /*****************************************************************************
  * EXERCICE 6 / Function
  ***************************************************************************** */
+// Function Personne
+personne() {
+  var christelle = [1, "Personne", "Christelle", "20 ans", "app/images/clubFoot/psg.png"];
+  var logo = "app/images/clubFoot/psg.png";
+  if ( christelle[1] == "Personne" ) {
+    this.position = 1;
+    this.lastName = "Personne";
+    this.firstName = "Christelle";
+    this.logoClub = logo;
+  }
 
+}
+// Function Caron
+caron() {
+
+}
+// Function Guillon
+guillon() {
+
+}
+// function All
+all() {
+
+}
 }
